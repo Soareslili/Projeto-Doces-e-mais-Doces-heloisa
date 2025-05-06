@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./styles/output.css">
+    <link rel="stylesheet" href="./styles/output.css">
     <title>Doces e mais Doces Heloisa</title>
 </head>
 
@@ -13,7 +13,7 @@
         <div class="logo">
             <img class="h-[130px] ml-[40px]" src="./assets/logo.png" alt="logo-doces">
         </div>
-    
+
         <nav class="nav-bar flex items-center justify-center gap-[20px] mr-[50px] text-xl font-roboto font-semibold">
             <a href="#" class="hover:text-[#FFC8DD]">Início</a>
             <a href="#" class="hover:text-[#FFC8DD]">Produtos</a>
@@ -21,25 +21,157 @@
             <a href="#" class="hover:text-[#FFC8DD]">Contato</a>
         </nav>
     </header>
-    
+
 
     <main class=" w-fful h-[100vh] flex items-center justify-between bg-gradient-to-r from-[#FFC8DD] to-[#FFF8FB]">
-       
+
         <div class=" flex flex-col items-center justify-center p-[20px] ml-[50px] w-[800px]">
-            <h1 class="text-black text-7xl font-bold mb-[30px] ">Doces que derretem no <span class="text-[#FF3385]">coração!</span></h1>
-            <p class="text-gray-500 text-2xl mb-[40px] ">Descubra o sabor artesanal dos doces mais deliciosos da região, feitos com carinho e ingredientes
+            <h1 class="text-black text-7xl  mb-[30px] ">Doces que derretem no <span
+                    class="text-[#FF3385]">coração!</span></h1>
+            <p class="text-gray-500 text-2xl mb-[40px] ">Descubra o sabor artesanal dos doces mais deliciosos da região,
+                feitos com carinho e ingredientes
                 selecionados.</p>
 
-                <button  class=" w-[300px] text-white text-2xl bg-[#FF3385] rounded-full px-6 py-2 mr-[60%] transform transition-all duration-300 hover:translate-y-[-5px]">Faça seu pedido</button>
+            <button
+                class=" w-[300px] text-white text-2xl bg-[#FF3385] rounded-full px-6 py-2 mr-[60%] transform transition-all duration-300 hover:translate-y-[-5px]">Faça
+                seu pedido</button>
         </div>
 
         <div class="grid grid-cols-2 grid-rows-2 items-center gap-[30px] mt-[10%]">
             <img class="w-[300px] h-[300px] rounded-full mr-[40px]" src="./assets/bolo.avif" alt="bolo">
-            <img class="w-[300px] h-[300px] rounded-full"  src="./assets/bolodechocolate.avif" alt="bolo-chocolate">
-            <img class="w-[350px] h-[350px] rounded-full ml-[50%] animate-up-down" src="./assets/docecolorido.avif" alt="doce-colorido">
+            <img class="w-[300px] h-[300px] rounded-full" src="./assets/bolodechocolate.avif" alt="bolo-chocolate">
+            <img class="w-[350px] h-[350px] rounded-full ml-[50%] animate-up-down" src="./assets/docecolorido.avif"
+                alt="doce-colorido">
 
         </div>
     </main>
+
+
+
+    <section
+    class="w-full min-h-screen  flex items-center justify-center bg-gradient-to-r from-[#DDA6D6] to-[#FFF8FB] py-10">
+
+        <div class="w-full max-w-7xl px-4 flex flex-col items-center">
+            <h2 class="text-5xl font-bold mb-10">
+                Nossos <span class="text-[#FF3385]">Produtos</span>
+            </h2>
+
+            <div class="flex gap-4 mb-10" id="categoryButtons">
+                <button data-category="brigadeiros"
+                    class="category-btn bg-white text-gray-700 px-7 py-2 rounded-full shadow-md font-bold text-2xl hover:bg-[#ffe0ef] transition">
+                    Brigadeiros
+                </button>
+                <button data-category="beijinhos"
+                    class="category-btn bg-white text-gray-700 px-7 py-2 rounded-full shadow-md font-bold text-2xl hover:bg-[#ffe0ef] transition">
+                    Beijinhos
+                </button>
+                <button data-category="bolos"
+                    class="category-btn bg-white text-gray-700 px-7 py-2 rounded-full shadow-md font-bold text-2xl hover:bg-[#ffe0ef] transition">
+                    Bolos
+                </button>
+            </div>
+
+            <div id="productsContainer" class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 mt-20">
+
+
+                <div data-category="brigadeiros" class="bg-white rounded-3xl shadow-lg overflow-hidden w-full transform transition-transform duration-300 hover:scale-105">
+                    <img class="w-full h-[250px] object-cover" src="./assets/brigadeiro.jpg" alt="foto-brigadeiro">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Brigadeiro Tradicional</h3>
+                        <p class="text-[#9D9CA8] text-lg">O clássico brigadeiro brasileiro coberto com granulado de
+                            chocolate.</p>
+                    </div>
+                </div>
+
+                <div data-category="brigadeiros" class="bg-white rounded-3xl shadow-lg overflow-hidden w-full transform transition-transform duration-300 hover:scale-105">
+                    <img class="w-full h-[250px] object-cover" src="./assets/pistache-2.jpg"
+                        alt="foto-brigadeiro-de-pistache">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Brigadeiro Gourmet de Pistache</h3>
+                        <p class="text-[#9D9CA8] text-lg"> Brigadeiro especial com pistache e cobertura de pistache
+                            triturado.</p>
+                    </div>
+                </div>
+
+                <div data-category="brigadeiros" class="bg-white rounded-3xl shadow-lg overflow-hidden w-full transform transition-transform duration-300 hover:scale-105">
+                    <img class="w-full h-[250px] object-cover"
+                        src="./assets/brigadeiro-de-caramelo-1-scaled-e1725282192226-1920x1267.webp"
+                        alt="foto-brigadeiro-de-camarelo">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Brigadeiro de Caramelo Salgado</h3>
+                        <p class="text-[#9D9CA8] text-lg"> Brigadeiro com o equilíbrio perfeito entre doce e salgado.
+                        </p>
+                    </div>
+                </div>
+
+                <div data-category="beijinhos" class="bg-white rounded-3xl shadow-lg overflow-hidden w-full transform transition-transform duration-300 hover:scale-105">
+                    <img class="w-full h-[250px] object-cover" src="./assets/beijinho.jpeg" alt="foto-beijinho">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Beijinho Tradicional</h3>
+                        <p class="text-[#9D9CA8] text-lg"> Doce de coco fresco coberto com açúcar e cravo.
+                        </p>
+                    </div>
+                </div>
+
+                <div data-category="beijinhos" class="bg-white rounded-3xl shadow-lg overflow-hidden w-full transform transition-transform duration-300 hover:scale-105">
+                    <img class="w-full h-[250px] object-cover" src="./assets/beijinhodecoco.jpg"
+                        alt="foto-beijinho-coco-queimado">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Beijinho de Coco Queimado</h3>
+                        <p class="text-[#9D9CA8] text-lg">Beijinho com um toque especial de coco tostado.
+                        </p>
+                    </div>
+                </div>
+
+                <div data-category="beijinhos" class="bg-white rounded-3xl shadow-lg overflow-hidden w-full transform transition-transform duration-300 hover:scale-105">
+                    <img class="w-full h-[250px] object-cover" src="./assets/Brigadeiro-de-limão.jpg"
+                        alt="foto-beijinho-de-limao">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Beijinho Gourmet de Limão</h3>
+                        <p class="text-[#9D9CA8] text-lg">Beijinho com um toque refrescante de limão.
+                        </p>
+                    </div>
+                </div>
+
+                <div data-category="bolos" class="bg-white rounded-3xl shadow-lg overflow-hidden w-full transform transition-transform duration-300 hover:scale-105">
+                    <img class="w-full h-[250px] object-cover"
+                        src="./assets/bolo-de-chocolate-com-morango-2-1200x1200.jpg"
+                        alt="foto-bolo-chocolate-com-morango">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Bolo de Chocolate com Morangos</h3>
+                        <p class="text-[#9D9CA8] text-lg">Bolo fofo de chocolate coberto com morangos frescos.
+                        </p>
+                    </div>
+                </div>
+
+                <div data-category="bolos" class="bg-white rounded-3xl shadow-lg overflow-hidden w-full transform transition-transform duration-300 hover:scale-105">
+                    <img class="w-full h-[250px] object-cover" src="./assets/Bolo-Red-Velvet.jpg"
+                        alt="foto-bolo-red-velvet">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Bolo Red Velvet</h3>
+                        <p class="text-[#9D9CA8] text-lg">Bolo aveludado com cobertura de cream cheese.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div data-category="bolos" class="bg-white rounded-3xl shadow-lg overflow-hidden w-full transform transition-transform duration-300 hover:scale-105" >
+                    <img class="w-full h-[250px] object-cover"
+                        src="./assets/bolo-de-cenoura-com-brigadeiro-em-camadas-dani-noce-destaque-1.jpg"
+                        alt="foto-bolo-de-cenoura-com-chocolate">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Bolo de Cenoura com Chocolate</h3>
+                        <p class="text-[#9D9CA8] text-lg">Clássico bolo de cenoura com cobertura de chocolate.
+                        </p>
+                    </div>
+                </div>    
+            </div>
+            
+        </div>        
+    </section>
+
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
