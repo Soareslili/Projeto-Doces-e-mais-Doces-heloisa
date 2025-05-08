@@ -1,3 +1,7 @@
+AOS.init();
+
+
+
 const buttons = document.querySelectorAll('#categoryButtons .category-btn');
 const cards = document.querySelectorAll('#productsContainer > div');
 
