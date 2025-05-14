@@ -1,6 +1,12 @@
 AOS.init();
 
 
+  const menuBtn = document.getElementById('menu-btn');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
+  });
 
 const buttons = document.querySelectorAll('#categoryButtons .category-btn');
 const cards = document.querySelectorAll('#productsContainer > div');

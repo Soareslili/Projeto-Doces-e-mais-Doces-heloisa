@@ -11,80 +11,102 @@
 </head>
 
 <body>
-    <header class="fixed w-full h-[130px] flex items-center justify-between bg-[#e1f4fc] bg-opacity-100 z-10">
+
+    <header class="fixed w-[100vw] h-[125px] flex items-center justify-between bg-[#e1f4fc] bg-opacity-100 z-10">
         <div class="logo">
-            <img class="h-[130px] ml-[40px]" src="./assets/logo.png" alt="logo-doces">
+            <img class="h-[125px]" src="./assets/logo.png" alt="logo-doces">
         </div>
 
-        <nav class="nav-bar flex items-center justify-center gap-[20px] mr-[50px] text-xl font-roboto font-semibold">
+
+        <button id="menu-btn" class="md:hidden mr-[20%] text-4xl text-[#FF3385] focus:outline-none">
+            &#9776;
+        </button>
+
+
+        <nav id="nav-menu"
+            class="hidden absolute top-[125px] left-0 w-full bg-[#e1f4fc] flex-col items-center text-xl font-roboto font-semibold py-10 px-6 space-y-6 shadow-md
+         md:flex md:static md:flex-row md:gap-[30px] md:w-auto md:py-0 md:px-0 md:space-y-0 md:shadow-none md:mr-[50px]">
+
             <a href="#" class="hover:text-[#FFC8DD]">Início</a>
-            <a href="#" class="hover:text-[#FFC8DD]">Produtos</a>
-            <a href="#" class="hover:text-[#FFC8DD]">Sobre</a>
-            <a href="#" class="hover:text-[#FFC8DD]">Contato</a>
+            <a href="#produtos" class="hover:text-[#FFC8DD]">Produtos</a>
+            <a href="#sobre" class="hover:text-[#FFC8DD]">Sobre</a>
+            <a href="#contato" class="hover:text-[#FFC8DD]">Contato</a>
         </nav>
+
     </header>
 
 
     <!--Inicio-->
 
-    <main class=" w-fful h-[100vh] flex items-center justify-between bg-gradient-to-r from-[#FFC8DD] to-[#FFF8FB]">
-
-        <div class=" flex flex-col items-center justify-center p-[20px] ml-[50px] w-[800px]">
-            <h1 class="text-black text-7xl  mb-[30px] ">Doces que derretem no <span
-                    class="text-[#FF3385]">coração!</span></h1>
-            <p class="text-gray-500 text-2xl mb-[40px] ">Descubra o sabor artesanal dos doces mais deliciosos da região,
-                feitos com carinho e ingredientes
-                selecionados.</p>
-
-            <button
-                class=" w-[300px] text-white text-2xl bg-[#FF3385] rounded-full px-6 py-2 mr-[60%] transform transition-all duration-300 hover:translate-y-[-5px]">Faça
-                seu pedido</button>
+    <main
+        class="w-full min-h-screen flex flex-col-reverse md:flex-row items-center justify-between bg-gradient-to-r from-[#FFC8DD] to-[#FFF8FB] px-6 py-10 md: overflow-x-hidden">
+        <!-- Texto -->
+        <div class="flex flex-col items-center md:items-start justify-center text-center md:text-left w-full md:w-1/2">
+            <h1 class="text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6">
+                Doces que derretem no <span class="text-[#FF3385]">coração!</span>
+            </h1>
+            <p class="text-gray-500 text-lg sm:text-xl lg:text-2xl mb-8">
+                Descubra o sabor artesanal dos doces mais deliciosos da região, feitos com carinho e ingredientes
+                selecionados.
+            </p>
+            <a href="https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20os%20doces&type=phone_number&app_absent=0"
+                class="bg-[#FF3385] text-white text-lg sm:text-xl rounded-full px-8 py-3 hover:translate-y-[-5px] transition-all duration-300">
+                Faça seu pedido
+            </a>
         </div>
 
-        <div class="grid grid-cols-2 grid-rows-2 items-center gap-[30px] mt-[10%]">
+       <div class="grid grid-cols-2 grid-rows-2 items-center gap-[30px] mt-[10%]">
             <img class="w-[300px] h-[300px] rounded-full mr-[40px]" src="./assets/bolo.avif" alt="bolo">
             <img class="w-[300px] h-[300px] rounded-full" src="./assets/bolodechocolate.avif" alt="bolo-chocolate">
             <img class="w-[350px] h-[350px] rounded-full ml-[50%] animate-up-down" src="./assets/docecolorido.avif"
                 alt="doce-colorido">
 
         </div>
+
+
+
+
     </main>
+
+
 
     <!-- Produtos -->
 
-    <section
-        class="w-full min-h-screen  flex items-center justify-center bg-gradient-to-r from-[#DDA6D6] to-[#FFF8FB] py-10">
+    <section id="produtos"
+        class="w-full min-h-screen flex items-center justify-center bg-gradient-to-r from-[#DDA6D6] to-[#FFF8FB] py-10 overflow-x-hidden">
 
         <div class="w-full max-w-7xl px-4 flex flex-col items-center">
-            <h2 class="text-5xl font-bold mb-10">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-center">
                 Nossos <span class="text-[#FF3385]">Produtos</span>
             </h2>
 
-            <div class="flex gap-4 mb-10" id="categoryButtons">
+
+            <div class="flex flex-wrap justify-center gap-4 mb-10" id="categoryButtons">
                 <button data-category="brigadeiros"
-                    class="category-btn bg-white text-gray-700 px-7 py-2 rounded-full shadow-md font-bold text-2xl hover:bg-[#ffe0ef] transition">
+                    class="category-btn bg-white text-gray-700 px-6 py-2 rounded-full shadow-md font-bold text-lg sm:text-xl hover:bg-[#ffe0ef] transition">
                     Brigadeiros
                 </button>
                 <button data-category="beijinhos"
-                    class="category-btn bg-white text-gray-700 px-7 py-2 rounded-full shadow-md font-bold text-2xl hover:bg-[#ffe0ef] transition">
+                    class="category-btn bg-white text-gray-700 px-6 py-2 rounded-full shadow-md font-bold text-lg sm:text-xl hover:bg-[#ffe0ef] transition">
                     Beijinhos
                 </button>
                 <button data-category="bolos"
-                    class="category-btn bg-white text-gray-700 px-7 py-2 rounded-full shadow-md font-bold text-2xl hover:bg-[#ffe0ef] transition">
+                    class="category-btn bg-white text-gray-700 px-6 py-2 rounded-full shadow-md font-bold text-lg sm:text-xl hover:bg-[#ffe0ef] transition">
                     Bolos
                 </button>
             </div>
 
-            <div id="productsContainer" class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 mt-20">
-
+            <!-- Produtos -->
+            <div id="productsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-10">
 
                 <div data-category="brigadeiros"
                     class="bg-white rounded-3xl shadow-lg overflow-hidden w-full transform transition-transform duration-300 hover:scale-105">
                     <img class="w-full h-[250px] object-cover" src="./assets/brigadeiro.jpg" alt="foto-brigadeiro">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">Brigadeiro Tradicional</h3>
-                        <p class="text-[#9D9CA8] text-lg">O clássico brigadeiro brasileiro coberto com granulado de
-                            chocolate.</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3">Brigadeiro Tradicional</h3>
+                        <p class="text-[#9D9CA8] text-base md:text-lg">
+                            O clássico brigadeiro brasileiro coberto com granulado de chocolate.
+                        </p>
                     </div>
                 </div>
 
@@ -93,8 +115,9 @@
                     <img class="w-full h-[250px] object-cover" src="./assets/pistache-2.jpg"
                         alt="foto-brigadeiro-de-pistache">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">Brigadeiro Gourmet de Pistache</h3>
-                        <p class="text-[#9D9CA8] text-lg"> Brigadeiro especial com pistache e cobertura de pistache
+                        <h3 class="text-xl md:text-2xl font-bold mb-3">Brigadeiro Gourmet de Pistache</h3>
+                        <p class="text-[#9D9CA8] text-base md:text-lg"> Brigadeiro especial com pistache e cobertura de
+                            pistache
                             triturado.</p>
                     </div>
                 </div>
@@ -105,8 +128,9 @@
                         src="./assets/brigadeiro-de-caramelo-1-scaled-e1725282192226-1920x1267.webp"
                         alt="foto-brigadeiro-de-camarelo">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">Brigadeiro de Caramelo Salgado</h3>
-                        <p class="text-[#9D9CA8] text-lg"> Brigadeiro com o equilíbrio perfeito entre doce e salgado.
+                        <h3 class="text-xl md:text-2xl font-bold mb-3">Brigadeiro de Caramelo Salgado</h3>
+                        <p class="text-[#9D9CA8] text-base md:text-lg"> Brigadeiro com o equilíbrio perfeito entre doce
+                            e salgado.
                         </p>
                     </div>
                 </div>
@@ -115,8 +139,8 @@
                     class="bg-white rounded-3xl shadow-lg overflow-hidden w-full transform transition-transform duration-300 hover:scale-105">
                     <img class="w-full h-[250px] object-cover" src="./assets/beijinho.jpeg" alt="foto-beijinho">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">Beijinho Tradicional</h3>
-                        <p class="text-[#9D9CA8] text-lg"> Doce de coco fresco coberto com açúcar e cravo.
+                        <h3 class="text-xl md:text-2xl font-bold mb-3">Beijinho Tradicional</h3>
+                        <p class="text-[#9D9CA8] text-base md:text-lg"> Doce de coco fresco coberto com açúcar e cravo.
                         </p>
                     </div>
                 </div>
@@ -126,8 +150,8 @@
                     <img class="w-full h-[250px] object-cover" src="./assets/beijinhodecoco.jpg"
                         alt="foto-beijinho-coco-queimado">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">Beijinho de Coco Queimado</h3>
-                        <p class="text-[#9D9CA8] text-lg">Beijinho com um toque especial de coco tostado.
+                        <h3 class="text-xl md:text-2xl font-bold mb-3">Beijinho de Coco Queimado</h3>
+                        <p class="text-[#9D9CA8] text-base md:text-lg">Beijinho com um toque especial de coco tostado.
                         </p>
                     </div>
                 </div>
@@ -137,8 +161,8 @@
                     <img class="w-full h-[250px] object-cover" src="./assets/Brigadeiro-de-limão.jpg"
                         alt="foto-beijinho-de-limao">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">Beijinho Gourmet de Limão</h3>
-                        <p class="text-[#9D9CA8] text-lg">Beijinho com um toque refrescante de limão.
+                        <h3 class="text-xl md:text-2xl font-bold mb-3">Beijinho Gourmet de Limão</h3>
+                        <p class="text-[#9D9CA8] text-base md:text-lg">Beijinho com um toque refrescante de limão.
                         </p>
                     </div>
                 </div>
@@ -149,8 +173,9 @@
                         src="./assets/bolo-de-chocolate-com-morango-2-1200x1200.jpg"
                         alt="foto-bolo-chocolate-com-morango">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">Bolo de Chocolate com Morangos</h3>
-                        <p class="text-[#9D9CA8] text-lg">Bolo fofo de chocolate coberto com morangos frescos.
+                        <h3 class="text-xl md:text-2xl font-bold mb-3">Bolo de Chocolate com Morangos</h3>
+                        <p class="text-[#9D9CA8] text-base md:text-lg">Bolo fofo de chocolate coberto com morangos
+                            frescos.
                         </p>
                     </div>
                 </div>
@@ -160,8 +185,8 @@
                     <img class="w-full h-[250px] object-cover" src="./assets/Bolo-Red-Velvet.jpg"
                         alt="foto-bolo-red-velvet">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">Bolo Red Velvet</h3>
-                        <p class="text-[#9D9CA8] text-lg">Bolo aveludado com cobertura de cream cheese.
+                        <h3 class="text-xl md:text-2xl font-bold mb-3">Bolo Red Velvet</h3>
+                        <p class="text-[#9D9CA8] text-base md:text-lg">Bolo aveludado com cobertura de cream cheese.
                         </p>
                     </div>
 
@@ -173,25 +198,28 @@
                         src="./assets/bolo-de-cenoura-com-brigadeiro-em-camadas-dani-noce-destaque-1.jpg"
                         alt="foto-bolo-de-cenoura-com-chocolate">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">Bolo de Cenoura com Chocolate</h3>
-                        <p class="text-[#9D9CA8] text-lg">Clássico bolo de cenoura com cobertura de chocolate.
+                        <h3 class="text-xl md:text-2xl font-bold mb-3">Bolo de Cenoura com Chocolate</h3>
+                        <p class="text-[#9D9CA8] text-base md:text-lg">Clássico bolo de cenoura com cobertura de
+                            chocolate.
                         </p>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </section>
 
+
+
+
     <!-- Sobre -->
 
-    <section class=" w-full min-h-screen flex flex-col items-center justify-center bg-[##FCF4F8] py-10 mt-[30px]">
+    <section id="sobre" class=" w-full min-h-screen flex flex-col items-center justify-center bg-[#EAE4F2] py-10 ">
 
-        <h2 class="text-5xl font-bold mb-10">Sobre <span class="text-[#FF3385]">Nós</span></h2>
+        <h2 class="text-5xl font-bold mb-10 mt-20">Sobre <span class="text-[#FF3385]">Nós</span></h2>
 
         <div class="w-full flex flex-col lg:flex-row items-center justify-center px-4 gap-20 py-10">
-            <img data-aos="fade-right" class="w-[500px] rounded-3xl shadow-md" src="./assets/doces.png"
-                alt="foto-doces">
+            <img class="w-[500px] rounded-3xl shadow-md" src="./assets/doces.png" alt="foto-doces">
 
             <div class="w-full max-w-xl bg-white rounded-2xl shadow-lg p-8">
                 <h3 class="text-3xl font-semibold mb-6 text-[#FF3385]">Nossa História</h3>
@@ -256,10 +284,10 @@
 
     </section>
 
-
-    <section class="w-full min-h-screen flex flex-col items-center bg-[##FCF4F8] py-10">
-        <h1 class="text-5xl font-bold mt-20 mb-20">Entre em <span class="text-[#FF3385]">Contato</span></h1>
-
+    <section id="contato" class="w-full min-h-screen flex flex-col items-center bg-[#EAE4F2] py-10">
+        <h1 class="text-5xl font-bold mt-20 mb-20 text-center sm:text-4xl">
+            Entre em <span class="text-[#FF3385]">Contato</span>
+        </h1>
 
         <div class="w-full max-w-6xl flex flex-col lg:flex-row items-stretch justify-center gap-10 px-4">
 
@@ -318,42 +346,60 @@
                     </ul>
                 </div>
 
-                <button
+                <a href="https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20os%20doces&type=phone_number&app_absent=0"
+                    target="_blank" data-aos="zoom-in-up" data-aos-delay="400"
                     class="flex items-center justify-center gap-3 bg-[#FF3385] text-white px-6 py-3 rounded-xl transform transition-all duration-300 hover:translate-y-[-5px] mt-4">
                     <img width="20" height="20" class="invert" src="https://img.icons8.com/ios/50/whatsapp--v1.png"
                         alt="whatsapp" />
                     Faça seu pedido pelo WhatsApp
-                </button>
+                </a>
             </div>
         </div>
-
     </section>
 
-    <footer>
-        <div>
-            <h3>Doces e mais Doces Heloisa</h3>
-            <div>
-                <img class="bg-[##fff] p-4 rounded-3xl transform transition-all duration-300 hover:translate-y-[-5px]"
-                    width="60" height="60" src="https://img.icons8.com/ios/50/phone--v1.png" alt="phone" />
-
-                <img class="bg-[#fff] p-4 rounded-3xl transform transition-all duration-300 hover:translate-y-[-5px]"
-                    width="60" height="60" src="https://img.icons8.com/ios/50/new-post--v1.png" alt="email" />
-
-                <img class="bg-[#fff] p-4 rounded-3xl transform transition-all duration-300 hover:translate-y-[-5px]"
-                    width="60" height="60" src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="instagram" />
-                
-                    <div>
-                </div>
-            </div>
-            <p>Doces artesanais que adoçam momentos especiais</p>
-            <hr>
+    <footer class="w-full py-10 py-6 bg-[#e1f4fc]">
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
 
             <div>
-                <p>© 2025 Doces e mais Doces Heloisa. Todos os direitos reservados.</p>
-                <p>Desenvolvido por Lidiane Santos - Desenvolvedora Front-End</p>
+                <h3 class="text-2xl font-bold text-[#FF3385] mb-2">Doces e mais Doces Heloisa</h3>
+                <p class="text-sm font-semibold">Doces artesanais que adoçam momentos especiais</p>
             </div>
 
+            <div class="flex gap-4 items-center">
+                <a href="#">
+                    <img class="bg-[#FF3385] p-4 rounded-3xl hover:translate-y-[-5px] transition-all duration-300"
+                        width="50" height="50" src="https://img.icons8.com/ios/50/phone--v1.png" alt="phone" />
+                </a>
+                <a href="#">
+                    <img class="bg-[#FF3385] p-4 rounded-3xl hover:translate-y-[-5px] transition-all duration-300"
+                        width="50" height="50" src="https://img.icons8.com/ios/50/new-post--v1.png" alt="email" />
+                </a>
+                <a href="#">
+                    <img class="bg-[#D9C7EC] p-4 rounded-3xl hover:translate-y-[-5px] transition-all duration-300"
+                        width="50" height="50" src="https://img.icons8.com/ios/50/instagram-new--v1.png"
+                        alt="instagram" />
+                </a>
+            </div>
+
+            <div class="text-sm mt-4 md:mt-0">
+                <p class="font-semibold">© 2025 Doces e mais Doces Heloisa. Todos os direitos reservados.</p>
+                <p class="font-semibold">Desenvolvido por Lidiane Santos - Desenvolvedora Front-End</p>
+            </div>
+
+        </div>
     </footer>
+
+    <a href="https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20os%20doces&type=phone_number&app_absent=0"
+        class="fixed bottom-4 right-6 z-[99] group" target="_blank" data-aos="zoom-in-up" data-aos-delay="400">
+        <img src="./assets/whatssapp.svg" alt="Botão WhatsApp"
+            class="w-[74px] transition-transform duration-400 group-hover:scale-110" />
+        <span
+            class="absolute left-[-150px] top-2 w-[140px] px-3 py-2 rounded-lg text-center text-sm font-medium bg-white text-yellow-600 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-400">
+            Conheça nossos doces
+        </span>
+    </a>
+
 
 
     <script src="./script.js"></script>
